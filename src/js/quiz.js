@@ -65,3 +65,14 @@ function enviarQuiz() {
     "resultado"
   ).innerText = `Você acertou ${acertos} de ${perguntas.length} perguntas.`;
 }
+
+window.onload = () => {
+    const container = document.getElementById("quiz-container");
+    perguntas.forEach((p, i) => {
+        const div = document.createElement("div");
+        div.innerHTML = `<p>${p.pergunta}</p>` + p.opcoes.map((op, j) =>
+            `<label><input type="radio" name="q${i}" value="${j}"> ${op}</label><br>`
+        ).join("");
+        container.appendChild(div);
+    });
+};
