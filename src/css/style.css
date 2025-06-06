@@ -20,14 +20,53 @@ nav ul {
 nav ul li {
   display: inline;
 }
+nav ul li a {
+  text-decoration: none;
+  color: black;
+  position: relative;
+}
+
+nav ul li a.active::after {
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: black;
+}
 main {
   padding: 2em;
 }
+.slideshow {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2em;
+  padding: 2em;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.slideshow figure {
+  margin: 0;
+  max-width: 100%;
+}
+
 .slideshow img {
   width: 100%;
-  max-width: 500px;
+  height: 300px;
+  object-fit: contain;
   display: block;
-  margin: 1em auto;
+  margin-bottom: 1em;
+  padding: 1em;
+}
+
+.slideshow figcaption {
+  text-align: center;
+  font-size: 1em;
+  color: black;
+  padding: 0.5em;
+  line-height: 1.4;
 }
 .hamburger {
   display: none;
@@ -40,5 +79,10 @@ main {
   #nav-list {
     display: none;
     flex-direction: column;
+  }
+}
+@media (max-width: 768px) {
+  .slideshow {
+    grid-template-columns: 1fr;
   }
 }

@@ -11,7 +11,7 @@
       <nav class="navbar">
         <span class="hamburger" onclick="toggleMenu()">☰</span>
         <ul id="nav-list">
-          <li><a href="index.html">Inicio</a></li>
+          <li><a href="index.html" class="active">Inicio</a></li>
           <li><a href="src/pages/quiz.html">Quiz</a></li>
           <li><a href="src/pages/contato.html">Contato</a></li>
           <li><button onclick="mudarFundo('padrao')">🎨</button></li>
@@ -23,9 +23,30 @@
     <main>
       <h1>Tecnologia contra Enchentes</h1>
       <section class="slideshow">
-        <img src="img1.jpg" alt="Imagem 1" />
-        <img src="img2.jpg" alt="Imagem 2" />
-        <img src="img3.jpg" alt="Imagem 3" />
+        <figure>
+          <img src="src/assets/image/app.png" alt="App" />
+          <figcaption>
+            Aplicativos móveis enviam alertas personalizados com base na
+            localização do usuário (via GPS), indicando rotas de fuga, abrigos e
+            previsão de chuva.
+          </figcaption>
+        </figure>
+        <figure>
+          <img src="src/assets/image/satelite.png" alt="Sátelite" />
+          <figcaption>
+            Satélites captam imagens antes, durante e depois das chuvas. A
+            inteligência artificial analisa padrões para prever enchentes e
+            mapear áreas de risco.
+          </figcaption>
+        </figure>
+        <figure>
+          <img src="src/assets/image/sensor.png" alt="Sensor" />
+          <figcaption>
+            Dispositivos instalados em rios e bueiros que medem em tempo real o
+            nível da água. Enviam alertas automáticos quando há risco de
+            transbordamento.
+          </figcaption>
+        </figure>
       </section>
       <p>
         As enchentes no Brasil causam impactos devastadores. A tecnologia pode
